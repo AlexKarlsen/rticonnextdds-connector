@@ -3,7 +3,7 @@ rticonnextdds-connector: Python
 
 ### Installation and platform support
 Check [here](https://github.com/rticommunity/rticonnextdds-connector#getting-started-with-python) and [here](https://github.com/rticommunity/rticonnextdds-connector#platform-support).
-If you still have trouble, write on the [RTI Community forum](https://community.rti.com/forums/technical-questions).
+If you still have trouble, write on the [RTI Community forum](https://community.rti.com/forums/technical-questions) or contact [RTI Support] (https://support.rti.com).
 
 ### Available examples
 In this directory, you can find one set of examples:
@@ -37,23 +37,23 @@ sem.release();
 For more information on the threading Python packages, see the documentation [here](https://docs.python.org/2/library/threading.html).
 
 ### API overview
-#### require the connector library
+#### require the Connector library
 If you want to use the `rticonnextdds_connector`, you have to import it:
 
 ```py
 import rticonnextdds_connector as rti
 ```
 
-#### instantiate a new connector
-To create a new connector you have to pass an XML file and a configuration name. For more information on
-the XML format, see the [XML App Creation guide](https://community.rti.com/rti-doc/510/ndds.5.1.0/doc/pdf/RTI_CoreLibrariesAndUtilities_XML_AppCreation_GettingStarted.pdf) or
+#### instantiate a new Connector
+To create a new Connector you have to pass an XML file and a configuration name. For more information on
+the XML format, see the [XML App Creation guide](https://community.rti.com/static/documentation/connext-dds/5.3.1/doc/manuals/connext_dds/xml_application_creation/RTI_ConnextDDS_CoreLibraries_XML_AppCreation_GettingStarted.pdf) or
 have a look at the [ShapeExample.xml](ShapeExample.xml) file included in this directory.  
 
 ```py
 connector = rti.Connector("MyParticipantLibrary::Zero","./ShapeExample.xml");
 ```
-#### delete a connector
-To destroy all the DDS entities that belong to a connector previously created, call the ```delete``` function.
+#### delete a Connector
+To destroy all the DDS entities that belong to a Connector previously created, call the ```delete``` function.
 
 ```py
 connector = rti.Connector("MyParticipantLibrary::Zero","./ShapeExample.xml");
@@ -106,7 +106,7 @@ The APIs to set an instance field by field are just three: `setNumber(fieldName,
 
 Nested fields can be accessed with the dot notation, `"x.y.z"`;  arrays or sequences with square brakets: `"x.y[1].z"`. For more information on how to access
 fields, see Section 6.4 'Data Access API' of the
-[RTI Prototyper Getting Started Guide](https://community.rti.com/rti-doc/510/ndds.5.1.0/doc/pdf/RTI_CoreLibrariesAndUtilities_Prototyper_GettingStarted.pdf).
+[RTI Prototyper Getting Started Guide](https://community.rti.com/static/documentation/connext-dds/5.3.1/doc/manuals/connext_dds/prototyper/RTI_ConnextDDS_CoreLibraries_Prototyper_GettingStarted.pdf).
 
 
 #### reading/taking data
